@@ -1,0 +1,25 @@
+package org.example.batchmongo.infra.batch;
+
+import org.example.batchmongo.domain.model.Bank;
+import org.springframework.batch.core.repository.JobRepository;
+import org.springframework.batch.core.step.Step;
+import org.springframework.batch.core.step.builder.StepBuilder;
+import org.springframework.batch.infrastructure.item.ItemProcessor;
+import org.springframework.batch.infrastructure.item.ItemReader;
+import org.springframework.batch.infrastructure.item.ItemWriter;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class StepConfig {
+    @Bean
+    public Step initialStep(JobRepository jobRepository, ItemReader<Bank> reader,
+                            ItemWriter<Bank> writer, ItemProcessor<Bank, Bank> processor) {
+        return new StepBuilder("first-step", jobRepository)
+                .<Bank, Bank>chunk(5)
+                .reader(reader)
+                .processor(processor)
+                .writer(writer)
+                .build();
+    }
+}
