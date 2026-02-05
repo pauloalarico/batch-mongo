@@ -13,7 +13,6 @@ import org.springframework.transaction.PlatformTransactionManager;
 import javax.sql.DataSource;
 
 @Configuration
-@ConfigurationProperties(prefix =  "datasource")
 public class MetaDataConfig {
     @Bean
     public JobRepository jobRepository(DataSource dataSource,
