@@ -1,6 +1,9 @@
 spring:
   application:
    name: batch-mongo
+  sql:
+    init:
+      mode: never
 
   datasource:
     username: ${DB_USERNAME}
@@ -24,6 +27,10 @@ spring:
       enabled: true
   mongodb:
     uri: ${MONGO_URL}
+
+
+  main:
+    allow-bean-definition-overriding: true
 
 app:
   paths:
