@@ -9,6 +9,7 @@ spring:
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
     url: ${DB_URL}
+    jdbc-url: ${DB_URL}
     jdbcUrl: ${DB_URL}
     driver-class-name: org.postgresql.Driver
     hikari:
@@ -22,15 +23,15 @@ spring:
         show-sql: true
   batch:
     jdbc:
-      initialize-schema: always
+      initialize-schema: never
     job:
       enabled: true
   mongodb:
     uri: ${MONGO_URL}
 
-
-  main:
-    allow-bean-definition-overriding: true
+  logging:
+    level.org.springframework.batch: DEBUG
+    level.org.example.batchmongo: DEBUG
 
 app:
   paths:
