@@ -17,7 +17,7 @@ public class MetaDataConfig {
     @Bean
     @Primary
     public JobRepository jobRepositoryMeta (DataSource dataSource,
-                                            @Qualifier("transactionManagerData") PlatformTransactionManager transactionManager) throws Exception {
+                                            PlatformTransactionManager transactionManager) throws Exception {
         JdbcJobRepositoryFactoryBean factory = new JdbcJobRepositoryFactoryBean();
         factory.setTransactionManager(transactionManager);
         factory.setDataSource(dataSource);

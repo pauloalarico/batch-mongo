@@ -7,7 +7,6 @@ import org.springframework.batch.core.step.builder.StepBuilder;
 import org.springframework.batch.infrastructure.item.ItemProcessor;
 import org.springframework.batch.infrastructure.item.ItemReader;
 import org.springframework.batch.infrastructure.item.ItemWriter;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.PlatformTransactionManager;
@@ -19,7 +18,7 @@ public class StepConfig {
                             ItemReader<Bank> reader,
                             ItemWriter<Bank> writer,
                             ItemProcessor<Bank, Bank> processor,
-                            @Qualifier("transactionManagerData") PlatformTransactionManager transactionManager) {
+                            PlatformTransactionManager transactionManager) {
         return new StepBuilder("first-step", jobRepository)
                 .<Bank, Bank>chunk(5)
                 .reader(reader)
