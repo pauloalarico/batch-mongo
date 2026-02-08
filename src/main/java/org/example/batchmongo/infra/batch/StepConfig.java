@@ -1,6 +1,6 @@
 package org.example.batchmongo.infra.batch;
 
-import org.example.batchmongo.domain.model.Bank;
+import org.example.batchmongo.domain.entitie.Bank;
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.step.Step;
 import org.springframework.batch.core.step.builder.StepBuilder;

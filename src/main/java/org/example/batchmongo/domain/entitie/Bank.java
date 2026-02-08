@@ -1,4 +1,4 @@
-package org.example.batchmongo.domain.model;
+package org.example.batchmongo.domain.entitie;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;

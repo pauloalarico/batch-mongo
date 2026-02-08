@@ -1,7 +1,7 @@
 package org.example.batchmongo.infra.batch;
 
 import lombok.RequiredArgsConstructor;
-import org.example.batchmongo.domain.model.Bank;
+import org.example.batchmongo.domain.entitie.Bank;
 import org.springframework.batch.infrastructure.item.ItemWriter;
 import org.springframework.batch.infrastructure.item.data.MongoItemWriter;
 import org.springframework.beans.factory.annotation.Value;

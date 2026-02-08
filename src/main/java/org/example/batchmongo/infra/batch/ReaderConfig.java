@@ -1,6 +1,6 @@
 package org.example.batchmongo.infra.batch;
 
-import org.example.batchmongo.domain.model.Bank;
+import org.example.batchmongo.domain.entitie.Bank;
 import org.springframework.batch.infrastructure.item.file.FlatFileItemReader;
 import org.springframework.batch.infrastructure.item.file.builder.FlatFileItemReaderBuilder;
 import org.springframework.beans.factory.annotation.Value;

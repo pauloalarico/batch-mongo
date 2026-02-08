@@ -1,7 +1,7 @@
 package org.example.batchmongo.infra.batch;
 
 import lombok.extern.slf4j.Slf4j;
-import org.example.batchmongo.domain.model.Bank;
+import org.example.batchmongo.domain.entitie.Bank;
 import org.springframework.batch.infrastructure.item.ItemProcessor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
