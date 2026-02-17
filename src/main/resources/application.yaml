@@ -33,6 +33,10 @@ spring:
     level.org.springframework.batch: DEBUG
     level.org.example.batchmongo: DEBUG
 
+  data:
+    redis:
+      port: ${REDIS_PORT}
+      host: ${REDIS_URL}
 app:
   paths:
     resource: ${PATH_RESOURCE}
